@@ -10,7 +10,7 @@ hamburger.addEventListener("click", () => {
 
 
 // ----- Typed Text -----
-const roles = ["AR/VR Enthusiast","Unity Developer","UI/UX Designer","React Developer"];
+const roles = ["AR/VR Enthusiast...","Unity Developer...","UI/UX Designer...","FullStack Developer..."];
 const typedTextSpan = document.querySelector(".typed-text");
 let roleIndex=0,charIndex=0,isDeleting=false;
 
@@ -62,17 +62,6 @@ function animateParticles(){
     //   if(dist<100){ const angle=Math.atan2(dy,dx); const force=(100-dist)/100*2;
     //     p.vx+=Math.cos(angle)*force; p.vy+=Math.sin(angle)*force;
     //   }
-    // }
-
-    // Draw trail
-    // p.trail.push({x:p.x,y:p.y});
-    // if(p.trail.length>10)p.trail.shift();
-    // for(let i=0;i<p.trail.length-1;i++){
-    //   ctx.strokeStyle=`rgba(255,204,0,${i/p.trail.length})`;
-    //   ctx.beginPath();
-    //   ctx.moveTo(p.trail[i].x,p.trail[i].y);
-    //   ctx.lineTo(p.trail[i+1].x,p.trail[i+1].y);
-    //   ctx.stroke();
     // }
 
     // Draw particle
@@ -136,3 +125,53 @@ function revealTimeline() {
 
 window.addEventListener('scroll', revealTimeline);
 window.addEventListener('load', revealTimeline);
+
+  const track = document.querySelector('.carousel-track');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const cards = document.querySelectorAll('.certificate-card');
+
+  let index = 0;
+  const visibleCards = window.innerWidth <= 768 ? 1 : 3;
+
+  function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index < cards.length - visibleCards) index++;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) index--;
+    updateCarousel();
+  });
+
+  // Swipe for mobile
+  let startX = 0;
+  track.addEventListener('touchstart', e => (startX = e.touches[0].clientX));
+  track.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50 && index < cards.length - visibleCards) {
+      index++;
+    } else if (endX - startX > 50 && index > 0) {
+      index--;
+    }
+    updateCarousel();
+  });
+
+  // Adjust on window resize
+  window.addEventListener('resize', () => {
+    index = 0;
+    updateCarousel();
+  });
+
+  function toggleCertificate(button) {
+    const certContainer = button.nextElementSibling;
+    certContainer.classList.toggle('show-cert');
+    button.textContent = certContainer.classList.contains('show-cert')
+      ? "Hide"
+      : "View";
+  }

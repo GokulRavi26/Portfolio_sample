@@ -35,8 +35,7 @@
 
 
     <!-- Home Section -->
-  
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -47,38 +46,39 @@
 </head>
 <body>
   <section id="home" class="section home">
-    <canvas id="particles-bg"></canvas>
+  <canvas id="particles-bg"></canvas>
 
-    <div class="intro">
-      <!-- <h1 class="main-title fade-slide">Hello, It's Me</h1> -->
-      <h1 class="main-title fade-slide">
-  Hello, <span class="small-text">It's Me</span>
-</h1>
+  <div class="home-container">
+    <!-- Centered Intro -->
+    <div class="intro fade-slide">
+      <h1 class="main-title">Hello, <span class="small-text">It's Me</span></h1>
+      <h1 class="main-title highlight">GOKUL R</h1>
+      <h2 class="subtitle">I'm a <span class="typed-text">UI/UX Designer..</span></h2>
 
-      <h1 class="main-title fade-slide">GOKUL R</h1>
-      <h2 class="subtitle fade-slide">
-        I'm a <span class="typed-text"></span><span class="cursor"></span>
-      </h2>
-
-      <a href="#projects" class="cta-btn glowing-btn fade-slide">
-        Explore My Work <i class="fas fa-arrow-right"></i>
+      <a href="yourcv.pdf" target="_blank" class="cta-btn glowing-btn">
+        View CV <i class="fas fa-arrow-right"></i>
       </a>
 
-      <div class="social-icons fade-slide">
-        <a href="https://github.com/GokulRavi26/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+      <div class="social-icons">
+        <a href="https://github.com/GokulRavi26" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/gokul2609/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="social-icon"><i>Resume</i></a>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRlQXrjWNKJvrkbQkrpjGnwFKpKzgNRvHzmHDXcLtSWjvPdlMVdPZFMRWpFqBmggsPQWCmG" class="social-icon"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
 
-    <div class="profile-image hover">
-      <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/ggokul.png" alt="Gokul">
+    <!-- Profile Image -->
+    <div class="profile-wrapper fade-slide">
+      <div class="profile-card">
+        <img src="ggokul.png" alt="Gokul">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
     <!-- About Section -->
@@ -162,44 +162,38 @@
 
 
 <!-- Education -->
-<!-- Education Timeline -->
+<!-- Education Section -->
 <section id="education" class="section education">
-    <div class="container">
-        <h2 class="section-heading">Education</h2>
-        <div class="timeline">
-            <!-- SSLC -->
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/krp.jpg" alt="SSLC" class="edu-img">
-                    <h3>SSLC</h3>
-                    <span>2018 - 2020</span>
-                    <p>KRP Matriculation School</p>
-                    <p>Percentage: <strong>91.8%</strong></p>
-                </div>
-            </div>
-            <!-- HSC -->
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/krp.jpg" alt="HSC" class="edu-img">
-                    <h3>HSC</h3>
-                    <span>2020 - 2022</span>
-                    <p>KRP Matriculation Higher Secondary School</p>
-                    <p>Percentage: <strong>83.1%</strong></p>
-                </div>
-            </div>
-            <!-- Bachelor -->
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/kec.jpg" alt="B.E." class="edu-img">
-                    <h3>Bachelor of Engineering</h3>
-                    <span>2022 - 2026</span>
-                    <p>Kongu Engineering College</p>
-                    <p>CGPA: <strong>7.66/10</strong></p>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="education-heading">EDUCATION</h2>
+
+    <div class="education-cards">
+      <!-- School Card -->
+      <div class="edu-card">
+        <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/krp.jpg" alt="KRP School" class="edu-img">
+        <h3>KRP Matriculation Higher Secondary School</h3>
+        <p class="edu-year">2019 - 2022</p>
+        <div class="edu-details">
+          <p><strong>SSLC(2020)</strong> — Percentage: <span>91.8%</span></p>
+          <p><strong>HSC(2022)</strong> — Percentage: <span>83.1%</span></p>
         </div>
+      </div>
+
+      <!-- College Card -->
+      <div class="edu-card">
+        <img src="https://raw.githubusercontent.com/GokulRavi26/Portfolio/main/kec.jpg" alt="Kongu Engineering College" class="edu-img">
+        <h3>Kongu Engineering College</h3>
+        <p class="edu-year">2022 - 2026</p>
+        <div class="edu-details">
+          <p><strong>Bachelor of Engineering(B.E) Computer Science and Design</strong></p>
+          <p>CGPA: <span>7.66 / 10</span></p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
+
 
 
 
